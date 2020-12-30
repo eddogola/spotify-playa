@@ -5,10 +5,10 @@ from dotenv import load_dotenv
 from youtubesearchpython import VideosSearch
 
 # load environment variables
-load_dotenv(dotenv_path='youtube.env')
+load_dotenv(dotenv_path='.env')
 
 # API authenticates by reading credentials from environment variables
-spotify = spotipy.Spotify(auth_manager=SpotifyOAuth(scope='playlist-read-private'))
+spotify = spotipy.Spotify(auth_manager=SpotifyOAuth(scope='user-library-read'))
 
 # open records file
 file = open('tracks.txt', 'a+')
@@ -64,12 +64,15 @@ def get_song_titles_from_songs(songs):
                 artists += ', {}'.format(artist['name'])
 
         title = '{} , {}'.format(song['track']['name'], artists)
+        """
         try:
             download_song(song_youtube_search(title))
         except:
             pass
-        write_to_file(title)
+        """
+        #write_to_file(title)
+        print(title)
 
-get_song_titles_from_songs(get_liked_songs())
-#get_song_titles_from_songs(get_songs_from_playlist(get_daily_mixes_playlists()[3]))
+#get_song_titles_from_songs(get_liked_songs())
+#get_song_titles_from_songs(get_songs_from_playlist(get_daily_mixes_playlists()[0]))
 #download_song(song_youtube_search("her hard place"))
