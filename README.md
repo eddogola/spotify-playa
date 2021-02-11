@@ -9,6 +9,10 @@ a bot for downloading songs from personal spotify playlists
   * youtubesearchpython
 
 # Setting-up
+Install requirements from the `requirements.txt` file
+    pip3 install -r requirements.txt
+
+
 You'll need to create an app(after logging in) at [Spotify developers dashboard](https://developers.spotify.com/dashboard/).
 ![create app screenshot](https://raw.githubusercontent.com/eddogola/spotify-playa/main/create-an-app-screenshot.png)
 
