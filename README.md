@@ -10,6 +10,8 @@ a bot for downloading songs from personal spotify playlists
 
 # Setting-up
 Install requirements from the `requirements.txt` file
+
+
     pip3 install -r requirements.txt
 
 
