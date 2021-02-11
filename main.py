@@ -41,7 +41,7 @@ def song_youtube_search(title):
 
 ydl_opts = {
     'format': 'bestaudio[ext=m4a]',
-    'outtmpl': '~/Downloads/Music/%(title)s.%(ext)s',
+    'outtmpl': '~/Music/%(title)s.%(ext)s',
 }
 
 def download_song(yt_link):
