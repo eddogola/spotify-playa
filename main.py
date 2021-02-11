@@ -32,12 +32,6 @@ def get_liked_songs():
         offset += limit
     return liked_songs
 
-def write_to_file(title):
-    tracks = file.readlines()
-    for track in tracks:
-        if title+'\n' not in track:
-            file.write("{}\n".format(title))
-
 def song_youtube_search(title):
     try:
         result = VideosSearch(title, limit=1,).result()
@@ -64,15 +58,10 @@ def get_song_titles_from_songs(songs):
                 artists += ', {}'.format(artist['name'])
 
         title = '{} , {}'.format(song['track']['name'], artists)
-        """
+        
         try:
             download_song(song_youtube_search(title))
         except:
             pass
-        """
-        #write_to_file(title)
-        print(title)
 
-#get_song_titles_from_songs(get_liked_songs())
-#get_song_titles_from_songs(get_songs_from_playlist(get_daily_mixes_playlists()[0]))
-#download_song(song_youtube_search("her hard place"))
+get_song_titles_from_songs(get_liked_songs())
