@@ -10,9 +10,6 @@ load_dotenv(dotenv_path='.env')
 # API authenticates by reading credentials from environment variables
 spotify = spotipy.Spotify(auth_manager=SpotifyOAuth(scope='user-library-read'))
 
-# open records file
-file = open('tracks.txt', 'a+')
-
 def get_all_playlists():
     return spotify.current_user_playlists()['items']
 
