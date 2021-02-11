@@ -1,2 +1,6 @@
 *.cache
-tracks.txt
+
+# virtual environment directory
+.venv
+# vscode files
+.vscode
